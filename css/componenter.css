@@ -73,7 +73,7 @@
 }
 
 /* ---------- NÅR MENU ER ÅBEN ---------- */
-.main-nav {
+.nav {
   display: none;
   position: fixed;
   inset: 0;
@@ -86,12 +86,12 @@
 }
 
 /* Når menu åbnes */
-.header.menu-open .main-nav {
+.header.menu-open .nav {
   display: block;
 }
 
 /* --- menu boksen --- */
-.main-nav-inner {
+.nav-inner {
   width: 82%;
   max-width: 420px;
   height: 100%;
@@ -132,11 +132,11 @@
   color: var(--color-text-primary);
 }
 /* hus skjules i popup menuen */
-.main-nav li:first-child {
+.nav li:first-child {
   display: none;
 }
 /* --- navigationen --- */
-.main-nav ul {
+.nav ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -145,12 +145,12 @@
   padding: 0;
 }
 
-.main-nav li {
+.nav li {
   width: 100%;
   list-style: none;
 }
 
-.main-nav a {
+.nav a {
   font-size: 2.2rem;
   font-weight: 500;
 }
@@ -188,7 +188,7 @@
     font-size: 2rem;
   }
 
-  .main-nav-inner {
+  .nav-inner {
     max-width: 520px;
     padding: 3rem;
   }
@@ -201,11 +201,11 @@
     font-size: 2rem;
   }
 
-  .main-nav a {
+  .nav a {
     font-size: 3rem;
   }
 
-  .main-nav li:first-child img {
+  .nav li:first-child img {
     width: 52px;
   }
 }
@@ -278,7 +278,8 @@
   }
 
   /* ---------- NAVIGATION DESKTOP ---------- */
-  .main-nav {
+
+  .nav {
     display: block;
     position: static;
     width: 100%;
@@ -290,7 +291,7 @@
     padding: 0.85rem 2.5rem;
   }
 
-  .main-nav-inner {
+  .nav-inner {
     width: 100%;
     max-width: none;
     height: auto;
@@ -304,19 +305,23 @@
     display: none;
   }
 
-  .main-nav ul {
+  .nav ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0;
   }
 
-  .main-nav a {
+  .nav a {
     font-size: 1.5rem;
     font-weight: 700;
   }
 
-  .main-nav li:first-child img {
+  /* ------ HUS ------ */
+  .nav li:first-child {
+    display: block;
+  }
+  .nav li:first-child img {
     width: 32px;
   }
 }
@@ -456,6 +461,13 @@
     flex-direction: row;
     gap: 0;
   }
+  /* ------ LINKS ------ */
+  .footer-section a {
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
 
   /* Lang grå boks */
   .footer-links {
@@ -474,17 +486,6 @@
   .footer-section h3 {
     font-size: 1.8rem;
     margin-bottom: 1.25rem;
-  }
-  /* ------ HUS ------ */
-  .main-nav li:first-child {
-    display: block;
-  }
-  /* ------ LINKS ------ */
-  .footer-section a {
-    font-size: 1.3rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
   }
   /* ---------- PIL---------- */
   .footer-arrow {
