@@ -1,0 +1,509 @@
+/* ------------------------- HEADER ------------------------- */
+.header {
+  padding: 2rem 1.5rem;
+}
+
+/* ---------- TOPPEN ---------- */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+/* ---------- LOGO ---------- */
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 155px;
+  height: auto;
+}
+
+/* ---------- PROFIL CIRKEL---------- */
+.profile-mobile {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--color-red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+  z-index: 1001;
+}
+
+/* Skuljer fulde navn & point */
+.profile-desktop {
+  display: none;
+}
+
+/* ---------- BURGER MENU KNAP---------- */
+.burger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 1002;
+  gap: 0.22rem;
+  justify-self: start;
+}
+/* Selve knappen (de 3 streger) */
+.burger-btn span {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  background-color: var(--color-text-primary);
+  border-radius: 999px;
+}
+
+/* Skjul knappen når menu er åben */
+.header.menu-open .burger-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- NÅR MENU ER ÅBEN ---------- */
+.main-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+/* Når menu åbnes */
+.header.menu-open .main-nav {
+  display: block;
+}
+
+/* --- menu boksen --- */
+.main-nav-inner {
+  width: 82%;
+  max-width: 420px;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- toppen i popup menuen --- */
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* logo i popup menuen */
+.menu-logo img {
+  width: 80px;
+  height: auto;
+}
+
+/* Krydset */
+.menu-close {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+/* hus skjules i popup menuen */
+.main-nav li:first-child {
+  display: none;
+}
+/* --- navigationen --- */
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 0;
+}
+
+.main-nav li {
+  width: 100%;
+  list-style: none;
+}
+
+.main-nav a {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+/* skujler profilcirkel når menu åben  */
+.header.menu-open .profile-mobile {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------- TABLET --------- */
+@media (min-width: 768px) {
+  .header {
+    padding: 3rem;
+  }
+
+  /* burgermenu knap */
+  .burger-btn {
+    width: 45px;
+    height: 15px;
+  }
+
+  .burger-btn span {
+    width: 24px;
+    height: 4px;
+  }
+  /* logo */
+  .logo img {
+    width: 220px;
+  }
+
+  .profile-mobile {
+    width: 85px;
+    height: 85px;
+    font-size: 2rem;
+  }
+
+  .main-nav-inner {
+    max-width: 520px;
+    padding: 3rem;
+  }
+
+  .menu-logo img {
+    width: 140px;
+  }
+
+  .menu-close {
+    font-size: 2rem;
+  }
+
+  .main-nav a {
+    font-size: 3rem;
+  }
+
+  .main-nav li:first-child img {
+    width: 52px;
+  }
+}
+
+/* --------- DESKTOP --------- */
+@media (min-width: 1024px) {
+  .header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  /* Fjern burger menu knap */
+  .burger-btn {
+    display: none;
+  }
+
+  /* ---------- TOP - original desktop ---------- */
+  .header-top {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .logo img {
+    width: 260px;
+  }
+
+  /* Skjul mobil cirkel */
+  .profile-mobile {
+    display: none;
+  }
+
+  /* Desktop profil */
+  .profile-desktop {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-pink-beige);
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    border-radius: 999px;
+    gap: 1rem;
+  }
+
+  .profile-circle {
+    width: 55px;
+    height: 55px;
+    border: 3px solid var(--color-red);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: var(--color-bg-primary);
+  }
+
+  .profile-info .name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .profile-info .points {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  /* ---------- NAVIGATION DESKTOP ---------- */
+  .main-nav {
+    display: block;
+    position: static;
+    width: 100%;
+    height: auto;
+    background: var(--color-grey);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 40px;
+    padding: 0.85rem 2.5rem;
+  }
+
+  .main-nav-inner {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    background: none;
+    backdrop-filter: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .menu-top {
+    display: none;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .main-nav a {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .main-nav li:first-child img {
+    width: 32px;
+  }
+}
+/* ------------------------- FOOTER ------------------------- */
+.footer {
+  padding: 2rem 1.5rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ---------- GRÅ BOKS ---------- */
+.footer-links {
+  background-color: var(--color-grey);
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0;
+}
+.footer-section h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.75rem;
+}
+
+/* ------ LINKS ------ */
+.footer-section a {
+  font-size: 1.15rem;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ---------- PIL---------- */
+.footer-arrow {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 0.22rem solid var(--color-red);
+  border-right: 0.22rem solid var(--color-red);
+  border-radius: 0.12rem;
+  transform: rotate(45deg);
+  margin-right: 0.35rem;
+}
+
+/* ---------- RØD BOKS ---------- */
+.footer-brand {
+  background-color: var(--color-red);
+  border-radius: 2rem;
+  padding: 2rem;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.footer-brand img {
+  width: 65px;
+  height: auto;
+}
+
+.footer-brand h2 {
+  color: var(--color-text-secondary);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 220px;
+}
+
+/* --------- TABLET ---------*/
+@media (min-width: 768px) {
+  .footer {
+    padding: 3rem;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .footer-links {
+    flex: 1.4;
+    padding: 3rem;
+    gap: 3rem;
+  }
+
+  /* Punkter stadig under hinanden */
+  .footer-section h3 {
+    font-size: 2.2rem;
+  }
+
+  .footer-section a {
+    font-size: 1.5rem;
+  }
+
+  .footer-brand {
+    flex: 1;
+    min-height: auto;
+    padding: 3rem;
+  }
+
+  .footer-brand img {
+    width: 95px;
+  }
+
+  .footer-brand h2 {
+    font-size: 3rem;
+    max-width: 260px;
+  }
+}
+
+/* --------- DESKTOP ---------*/
+@media (min-width: 1024px) {
+  .footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  /* Lang grå boks */
+  .footer-links {
+    flex: 3;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 4.5rem;
+    gap: 4rem;
+  }
+
+  .footer-section {
+    flex: 1;
+  }
+
+  .footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+  }
+  /* ------ HUS ------ */
+  .main-nav li:first-child {
+    display: block;
+  }
+  /* ------ LINKS ------ */
+  .footer-section a {
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  /* ---------- PIL---------- */
+  .footer-arrow {
+    color: var(--color-red);
+    font-weight: 700;
+  }
+
+  .footer-brand {
+    flex: 1;
+    padding: 3rem 2rem;
+    min-height: 100%;
+  }
+
+  .footer-brand img {
+    width: 90px;
+  }
+
+  .footer-brand h2 {
+    font-size: 2.5rem;
+    max-width: 220px;
+  }
+}
