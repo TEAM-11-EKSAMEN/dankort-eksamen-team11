@@ -1,8 +1,149 @@
 /* --------- MOBILE FIRST ---------*/
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url("../img/profile/Generated with Kive.ai - Ultra-realistic cinematic photograph of a dense Scandinavian forest covered in soft morning fog and mist. Tall dark pine trees emerging through layers of atmospheric haze_ creating a mysterious and calm Nordic m (1.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header,
+main,
+footer {
+  background: transparent;
+}
+header {
+  background: transparent;
+}
+main {
+  width: 100%;
+  min-height: 100vh; /* få det til at fylde hele mobilen */
+  padding: 2rem 1.5rem 3rem;
+}
+
+.profile-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-member-rank {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-member-rank img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2rem;
+}
+
+.profile-badge {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(188, 188, 188, 0.35) 0%,
+    rgba(0, 95, 150, 0.35) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.badge-copy-wrapper {
+  flex: 1;
+}
+
+.badge-greeting {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.badge-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.badge-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.badge-image img {
+  display: block;
+  width: 72px;
+  height: auto;
+}
 
 /* --------- TABLET ---------*/
 @media (min-width: 768px) {
+  main {
+    padding: 3rem 2.5rem 4rem;
+  }
+
+  .profile-badge {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .badge-greeting {
+    font-size: 2rem;
+  }
+
+  .badge-title {
+    font-size: 1.5rem;
+  }
+
+  .badge-image img {
+    width: 88px;
+  }
 }
+
 /* --------- DESKTOP ---------*/
 @media (min-width: 1024px) {
+  main {
+    padding: 4rem 3rem 5rem;
+  }
+
+  .profile-badge {
+    padding: 2.5rem;
+  }
+
+  .badge-greeting {
+    font-size: 2.5rem;
+  }
+
+  .badge-title {
+    font-size: 1.75rem;
+  }
+
+  .badge-image img {
+    width: 110px;
+  }
 }
