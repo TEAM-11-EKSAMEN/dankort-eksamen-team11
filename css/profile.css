@@ -49,6 +49,108 @@ main {
   border-radius: 2rem;
 }
 
+.donation-card {
+  width: 100%;
+  max-width: 720px;
+  padding: 1.75rem 1.75rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(188, 188, 188, 0.35) 0%,
+    rgba(0, 95, 150, 0.35) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.donation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donation-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.donation-info {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.donation-value-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.donation-value {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.donation-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.donation-total {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.donation-total span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.donation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 180px;
+  padding: 0.65rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: #ffffff;
+  color: #1f1f1f;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.donation-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
+}
+
 .profile-badge {
   width: 100%;
   max-width: 720px;
