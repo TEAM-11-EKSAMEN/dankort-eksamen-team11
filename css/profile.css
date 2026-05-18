@@ -54,15 +54,11 @@ main {
   max-width: 720px;
   padding: 1.75rem 1.75rem 2rem;
   border-radius: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(188, 188, 188, 0.35) 0%,
-    rgba(0, 95, 150, 0.35) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(12, 54, 96, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -83,13 +79,14 @@ main {
 
 .donation-info {
   display: inline-flex;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-weight: 700;
+  font-size: 0.75rem;
   background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
@@ -151,6 +148,13 @@ main {
   box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
 }
 
+.lige-tal,
+.tabular-tal {
+  font-family: "Raleway", sans-serif;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1;
+}
+
 .profile-badge {
   width: 100%;
   max-width: 720px;
@@ -160,15 +164,11 @@ main {
   gap: 1.25rem;
   padding: 1.5rem;
   border-radius: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(188, 188, 188, 0.35) 0%,
-    rgba(0, 95, 150, 0.35) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(12, 54, 96, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .badge-copy-wrapper {
