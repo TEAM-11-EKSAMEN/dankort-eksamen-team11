@@ -19,9 +19,7 @@ main,
 footer {
   background: transparent;
 }
-header {
-  background: transparent;
-}
+
 main {
   width: 100%;
   min-height: 100vh; /* få det til at fylde hele mobilen */
@@ -359,7 +357,6 @@ main {
   box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
 }
 
-.lige-tal,
 .tabular-tal {
   font-family: "Raleway", sans-serif;
   font-variant-numeric: tabular-nums lining-nums;
@@ -371,42 +368,10 @@ main {
   max-width: 720px;
 }
 
-.badge-copy-wrapper {
-  width: 100%;
-}
-
 .badge-copy-image {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.badge-greeting {
-  margin: 0 0 0.25rem;
-  font-size: 1.75rem;
-  font-weight: 800;
-  line-height: 1.05;
-  color: #ffffff;
-}
-
-.badge-title {
-  margin: 0 0 0.75rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.badge-text {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #ffffff;
-}
-
-.badge-image img {
-  display: block;
-  width: 72px;
-  height: auto;
 }
 
 /* --------- TABLET ---------*/
@@ -426,16 +391,10 @@ main {
     max-width: 760px;
   }
 
-  .badge-greeting {
-    font-size: 2rem;
-  }
-
-  .badge-title {
-    font-size: 1.5rem;
-  }
-
-  .badge-image img {
-    width: 88px;
+  .green-choice-illustration,
+  .development-illustration {
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -510,18 +469,6 @@ main {
     max-width: none;
   }
 
-  .badge-greeting {
-    font-size: 2.5rem;
-  }
-
-  .badge-title {
-    font-size: 1.75rem;
-  }
-
-  .badge-image img {
-    width: 110px;
-  }
-
   .profile-member-rank img,
   .badges-illustration,
   .badge-copy-image {
@@ -537,12 +484,6 @@ main {
 
   .donation-card {
     justify-content: space-between;
-  }
-
-  .green-choice-illustration,
-  .development-illustration {
-    width: 100%;
-    max-width: none;
   }
 
   .card-design-card {

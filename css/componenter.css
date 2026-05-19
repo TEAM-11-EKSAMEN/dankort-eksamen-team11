@@ -406,8 +406,8 @@
   max-width: 220px;
 }
 
-/* --------- TABLET ---------*/
-@media (min-width: 768px) {
+/* --------- DESKTOP ---------*/
+@media (min-width: 1024px) {
   .footer {
     padding: 3rem;
   }
