@@ -11,6 +11,10 @@
   --font-primary: "Raleway", sans-serif;
   --color-text-primary: #000000;
   --color-text-secondary: #ffffff;
+
+  /* Border radius */
+  --radius-small: 0.5rem;
+  --radius-medium: 2rem;
 }
 /* --------- BREDDE I MAIN ---------*/
 main {
@@ -87,7 +91,7 @@ p {
   line-height: 1.1;
   text-align: center;
   padding: 0.65rem 1.3rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-small);
   border: none;
   cursor: pointer;
   transition:
@@ -95,8 +99,8 @@ p {
     opacity 0.2s ease;
 }
 
-.red-cta,
-.grey-cta,
+.red-cta:hover,
+.grey-cta:hover,
 .white-cta:hover {
   transform: scale(1.02);
   opacity: 0.95;
@@ -109,10 +113,10 @@ p {
     font-size: 3.5rem;
   }
 
-  .H2 {
+  .h2 {
     font-size: 2rem;
   }
-  .H3 {
+  .h3 {
     font-size: 1.6rem;
   }
 
@@ -134,10 +138,10 @@ p {
     font-size: 4.5rem;
   }
 
-  .H2 {
+  .h2 {
     font-size: 3rem;
   }
-  .H3 {
+  .h3 {
     font-size: 1.75rem;
   }
   p {
