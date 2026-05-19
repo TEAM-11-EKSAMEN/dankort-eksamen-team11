@@ -221,3 +221,167 @@
     min-width: 12rem;
   }
 }
+
+/* --------- MOBILE FIRST ---------*/
+/* Tredje sektion */
+.track-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5.5rem;
+}
+
+.track-content {
+  display: contents;
+}
+
+.track-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.track-intro {
+  order: 1;
+}
+
+.track-picture {
+  display: block;
+  width: 100%;
+  order: 2;
+}
+
+.track-action {
+  order: 3;
+}
+
+.track-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.track-content p {
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.track-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 17rem;
+  margin: 1.75rem auto 0;
+}
+
+.track-buttons .red-cta,
+.track-buttons .grey-cta {
+  width: 100%;
+  min-height: 3.5rem;
+  font-size: 1rem;
+  border-radius: 0.65rem;
+}
+
+.track-image {
+  width: 100%;
+  border-radius: var(--radius-medium);
+}
+
+/* --------- TABLET ---------*/
+/* Tredje sektion */
+@media (min-width: 768px) {
+  .track-section {
+    gap: 2.75rem;
+    padding-top: 6.5rem;
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .track-text-group {
+    max-width: none;
+  }
+
+  .track-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .track-content p {
+    font-size: 1.4rem;
+  }
+
+  .track-picture {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .track-buttons {
+    max-width: 18rem;
+    margin: 2rem auto 0;
+  }
+
+  .track-buttons .red-cta,
+  .track-buttons .grey-cta {
+    min-height: 3.75rem;
+    font-size: 1.15rem;
+  }
+}
+
+/* --------- DESKTOP ---------*/
+/* Tredje sektion */
+@media (min-width: 1024px) {
+  .track-section {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 7.5rem;
+  }
+
+  .track-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .track-text-group {
+    max-width: 28rem;
+  }
+
+  .track-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .track-content p {
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+
+  .track-picture {
+    order: initial;
+    width: 100%;
+    max-width: 38rem;
+    justify-self: end;
+  }
+
+  .track-buttons {
+    flex-direction: row;
+    max-width: none;
+    margin: 3rem 0 0;
+  }
+
+  .track-buttons .red-cta,
+  .track-buttons .grey-cta {
+    width: auto;
+    min-width: 11.5rem;
+    min-height: 3.25rem;
+    font-size: 1rem;
+  }
+
+  .track-image {
+    width: 100%;
+  }
+}
