@@ -64,6 +64,139 @@ main {
   gap: 1.25rem;
 }
 
+.green-choice-card {
+  width: 100%;
+  max-width: 720px;
+  padding: 1.75rem 1.75rem 1.5rem;
+  border-radius: 2rem;
+  background: rgba(12, 54, 96, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.green-choice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.green-choice-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.green-choice-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 0 0.75rem;
+}
+
+.green-choice-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: calc(52px + 0.65rem);
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.green-choice-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-choice-icon img {
+  width: 36px;
+  height: auto;
+  display: block;
+}
+
+.green-choice-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.green-choice-item-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.green-choice-item-note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.green-choice-item-note::before {
+  content: "▲";
+  color: #12761c;
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.green-choice-illustration {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+}
+
+.co2-illustration-section {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+}
+
+.badges-illustration-section {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.badges-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.development-illustration-section {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+}
+
+.development-illustration {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .donation-header {
   display: flex;
   justify-content: space-between;
@@ -158,21 +291,16 @@ main {
 .profile-badge {
   width: 100%;
   max-width: 720px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.5rem;
-  border-radius: 2rem;
-  background: rgba(12, 54, 96, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .badge-copy-wrapper {
-  flex: 1;
+  width: 100%;
+}
+
+.badge-copy-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .badge-greeting {
