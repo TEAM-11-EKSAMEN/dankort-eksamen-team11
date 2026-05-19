@@ -197,6 +197,83 @@ main {
   margin: 0 auto;
 }
 
+.card-design-card {
+  width: 100%;
+  max-width: 720px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 2rem;
+  background: rgba(12, 54, 96, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card-design-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-design-title,
+.card-design-label {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.card-design-title {
+  align-self: flex-start;
+  font-size: 1rem;
+}
+
+.card-design-label {
+  font-size: 1.05rem;
+}
+
+.card-design-card-image {
+  width: clamp(88px, 24vw, 132px);
+  height: auto;
+  display: block;
+}
+
+.card-design-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.card-design-colors {
+  width: min(100%, 190px);
+  height: auto;
+  display: block;
+}
+
+.card-design-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 190px);
+  min-height: 40px;
+  padding: 0.7rem 0.9rem;
+  border: 0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1f1f1f;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
 .donation-header {
   display: flex;
   justify-content: space-between;
@@ -276,7 +353,8 @@ main {
     box-shadow 0.2s ease;
 }
 
-.donation-button:hover {
+.donation-button:hover,
+.card-design-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
 }
@@ -337,9 +415,15 @@ main {
     padding: 3rem 2.5rem 4rem;
   }
 
-  .profile-badge {
-    gap: 2rem;
-    padding: 2rem;
+  .profile-badge,
+  .profile-member-rank,
+  .donation-card,
+  .green-choice-card,
+  .co2-illustration-section,
+  .badges-illustration-section,
+  .development-illustration-section,
+  .card-design-card {
+    max-width: 760px;
   }
 
   .badge-greeting {
@@ -358,11 +442,72 @@ main {
 /* --------- DESKTOP ---------*/
 @media (min-width: 1024px) {
   main {
-    padding: 4rem 3rem 5rem;
+    padding: 4rem 1.5rem 42rem;
+  }
+
+  .profile-hero {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.88fr);
+    grid-template-areas:
+      "profile rank"
+      "green donation"
+      "co2 carddesign"
+      "badges carddesign"
+      "development development";
+    align-items: stretch;
+    gap: 1.5rem;
   }
 
   .profile-badge {
-    padding: 2.5rem;
+    grid-area: profile;
+  }
+
+  .profile-member-rank {
+    grid-area: rank;
+  }
+
+  .profile-badge,
+  .profile-member-rank {
+    height: 255px;
+  }
+
+  .green-choice-card {
+    grid-area: green;
+  }
+
+  .donation-card {
+    grid-area: donation;
+  }
+
+  .co2-illustration-section {
+    grid-area: co2;
+  }
+
+  .badges-illustration-section {
+    grid-area: badges;
+  }
+
+  .card-design-card {
+    grid-area: carddesign;
+  }
+
+  .development-illustration-section {
+    grid-area: development;
+  }
+
+  .profile-badge,
+  .profile-member-rank,
+  .donation-card,
+  .green-choice-card,
+  .co2-illustration-section,
+  .badges-illustration-section,
+  .development-illustration-section,
+  .card-design-card {
+    width: 100%;
+    max-width: none;
   }
 
   .badge-greeting {
@@ -375,5 +520,49 @@ main {
 
   .badge-image img {
     width: 110px;
+  }
+
+  .profile-member-rank img,
+  .badges-illustration,
+  .badge-copy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .green-choice-card,
+  .donation-card {
+    min-height: 315px;
+  }
+
+  .donation-card {
+    justify-content: space-between;
+  }
+
+  .green-choice-illustration,
+  .development-illustration {
+    width: 100%;
+    max-width: none;
+  }
+
+  .card-design-card {
+    min-height: 100%;
+    padding: 1.5rem 2rem;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 1.75rem;
+  }
+
+  .card-design-title,
+  .card-design-label {
+    font-size: 1.15rem;
+  }
+
+  .card-design-card-image {
+    width: clamp(135px, 13vw, 185px);
+  }
+
+  .card-design-colors,
+  .card-design-button {
+    width: min(100%, 230px);
   }
 }
