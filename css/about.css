@@ -102,14 +102,6 @@ p {
   margin: 82px 0 118px;
 }
 
-.tags span {
-  padding: 11px 18px;
-  border-radius: 999px;
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-  font-size: 14px;
-}
-
 .content-cards {
   position: relative;
   width: min(100%, 420px);
@@ -484,12 +476,6 @@ p {
     gap: 50px;
     margin-top: 150px;
     margin-bottom: 250px;
-  }
-
-  .tags span {
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 999px;
   }
 
   .content-cards {
