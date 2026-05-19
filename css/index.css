@@ -1,4 +1,5 @@
 /* --------- MOBILE FIRST ---------*/
+/* Første sektion */
 .hero-section {
   padding-top: 1.5rem;
 }
@@ -52,6 +53,7 @@
 }
 
 /* --------- TABLET ---------*/
+/* Første sektion */
 @media (min-width: 768px) {
   .hero-card {
     min-height: 42rem;
@@ -80,6 +82,7 @@
 }
 
 /* --------- DESKTOP ---------*/
+/* Første sektion */
 @media (min-width: 1200px) {
   .hero-section {
     padding-top: 3rem;
@@ -113,5 +116,108 @@
     width: 32%;
     max-width: 30rem;
     transform: translateY(-50%);
+  }
+}
+
+/* --------- MOBILE FIRST ---------*/
+/* Anden sektion */
+.design-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.design-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.design-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.design-content p {
+  font-size: 1.25rem;
+  line-height: 1.65;
+}
+
+.design-content .red-cta {
+  display: none;
+}
+
+.design-video {
+  width: 100%;
+  border-radius: var(--radius-medium);
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* --------- TABLET ---------*/
+@media (min-width: 768px) {
+  /* Anden sektion */
+  .design-section {
+    padding-top: 5rem;
+    gap: 2.5rem;
+  }
+
+  .design-content {
+    max-width: 38rem;
+  }
+
+  .design-content h2 {
+    font-size: 2.6rem;
+  }
+
+  .design-content p {
+    font-size: 1.35rem;
+  }
+
+  .design-video {
+    max-width: 34rem;
+  }
+}
+
+/* --------- DESKTOP ---------*/
+@media (min-width: 1200px) {
+  /* Anden sektion */
+  .design-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 6rem;
+  }
+
+  .design-video {
+    order: 1;
+    width: 100%;
+    max-width: 34rem;
+    justify-self: end;
+  }
+
+  .design-content {
+    order: 2;
+    max-width: 42rem;
+    gap: 1.25rem;
+  }
+
+  .design-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .design-content p {
+    font-size: 1.3rem;
+    line-height: 1.55;
+  }
+
+  .design-content .red-cta {
+    display: inline-flex;
+    align-self: flex-end;
+    margin-top: -4rem;
+    min-width: 12rem;
   }
 }
