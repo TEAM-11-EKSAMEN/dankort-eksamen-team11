@@ -747,3 +747,129 @@
     margin-top: 2rem;
   }
 }
+
+/* --------- MOBILE FIRST ---------*/
+/* Sjette sektion */
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 5.5rem;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience-content h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.experience-content p {
+  font-size: 1.8rem;
+  line-height: 1.45;
+}
+
+.experience-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 17rem;
+  margin: 1.5rem auto 0;
+}
+
+.experience-buttons .red-cta,
+.experience-buttons .grey-cta {
+  width: 100%;
+  min-height: 3.75rem;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+}
+
+.experience-image {
+  width: 100%;
+  border-radius: var(--radius-medium);
+  object-fit: cover;
+}
+
+/* --------- TABLET ---------*/
+/* Sjette sektion */
+@media (min-width: 768px) {
+  .experience-section {
+    gap: 2.75rem;
+    padding-top: 6.5rem;
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .experience-content h2 {
+    font-size: 2.7rem;
+  }
+
+  .experience-content p {
+    font-size: 1.9rem;
+  }
+
+  .experience-buttons {
+    max-width: 18rem;
+  }
+
+  .experience-buttons .red-cta,
+  .experience-buttons .grey-cta {
+    min-height: 3.9rem;
+    font-size: 1.15rem;
+  }
+}
+
+/* --------- DESKTOP ---------*/
+/* Sjette sektion */
+@media (min-width: 1024px) {
+  .experience-section {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 7.5rem;
+  }
+
+  .experience-content {
+    gap: 1rem;
+  }
+
+  .experience-content h2 {
+    font-size: 2rem;
+  }
+
+  .experience-content p {
+    font-size: 1.45rem;
+    line-height: 1.4;
+    max-width: 30rem;
+  }
+
+  .experience-buttons {
+    flex-direction: row;
+    max-width: none;
+    margin: 2rem 0 0;
+  }
+
+  .experience-buttons .red-cta,
+  .experience-buttons .grey-cta {
+    width: auto;
+    min-width: 10.5rem;
+    min-height: 3rem;
+    font-size: 0.95rem;
+  }
+
+  .experience-image {
+    width: 100%;
+    max-width: 22rem;
+    justify-self: end;
+  }
+}
