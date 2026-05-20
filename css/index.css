@@ -873,3 +873,246 @@
     justify-self: end;
   }
 }
+
+/* --------- MOBILE FIRST ---------*/
+/* Syvende sektion */
+.features-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+  padding-top: 5.5rem;
+}
+
+.feature-card {
+  width: min(100%, 15.5rem);
+  min-height: 12rem;
+  background-color: var(--color-red);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-medium);
+  text-align: center;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-logo {
+  width: 4rem;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+.feature-card h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: var(--color-text-secondary);
+}
+
+/* --------- TABLET ---------*/
+/* Syvende sektion */
+@media (min-width: 768px) {
+  .features-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding-top: 6.5rem;
+  }
+
+  .feature-card {
+    width: 100%;
+    min-height: 11rem;
+    padding: 1.75rem 1rem;
+  }
+
+  .feature-logo {
+    width: 3.5rem;
+  }
+
+  .feature-card h2 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* --------- DESKTOP ---------*/
+/* Syvende sektion */
+@media (min-width: 1024px) {
+  .features-section {
+    max-width: 1100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    padding-top: 7.5rem;
+  }
+
+  .feature-card {
+    width: 16rem;
+    min-height: 12rem;
+    border-radius: var(--radius-medium);
+    padding: 2rem 1.25rem;
+  }
+
+  .feature-logo {
+    width: 4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature-card h2 {
+    font-size: 1.05rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* --------- MOBILE FIRST ---------*/
+/* Ottende sektion */
+.facts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5.5rem;
+}
+
+.facts-image {
+  width: 100%;
+  border-radius: var(--radius-medium);
+  object-fit: cover;
+}
+
+.facts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.facts-content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.facts-list li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.facts-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  color: var(--color-red);
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.facts-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.facts-brand img {
+  width: 4.5rem;
+  height: auto;
+}
+
+.facts-brand p {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+/* --------- TABLET ---------*/
+/* Ottende sektion */
+@media (min-width: 768px) {
+  .facts-section {
+    gap: 2.75rem;
+    padding-top: 6.5rem;
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .facts-content h2 {
+    font-size: 3rem;
+  }
+
+  .facts-list li {
+    font-size: 1.45rem;
+  }
+
+  .facts-brand p {
+    font-size: 1.45rem;
+  }
+}
+
+/* --------- DESKTOP ---------*/
+/* Ottende sektion */
+@media (min-width: 1024px) {
+  .facts-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 7.5rem;
+  }
+
+  .facts-image {
+    max-width: 20rem;
+  }
+
+  .facts-content {
+    gap: 1.25rem;
+  }
+
+  .facts-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .facts-list {
+    gap: 1.15rem;
+  }
+
+  .facts-list li {
+    font-size: 1.55rem;
+  }
+
+  .facts-brand {
+    margin-top: 1rem;
+  }
+
+  .facts-brand img {
+    width: 4rem;
+  }
+
+  .facts-brand p {
+    font-size: 1.15rem;
+  }
+}
