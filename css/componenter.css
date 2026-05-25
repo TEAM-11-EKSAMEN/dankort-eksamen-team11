@@ -3,25 +3,24 @@
   padding: 2rem 1.5rem;
 }
 
-/* ---------- TOPPEN ---------- */
+/* ---------- toppen ---------- */
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.25rem;
 }
-/* ---------- LOGO ---------- */
+/* --- logo --- */
 .logo {
   display: flex;
   justify-content: center;
 }
-
 .logo img {
   width: 155px;
   height: auto;
 }
 
-/* ---------- PROFIL CIRKEL---------- */
+/* ------ profil cirklen ------ */
 .profile-mobile {
   width: 45px;
   height: 45px;
@@ -34,13 +33,12 @@
   font-size: 1rem;
   z-index: 1001;
 }
-
-/* Skuljer fulde navn & point */
+/* Skuljer fulde navn & point - som kun vises i desktop */
 .profile-desktop {
   display: none;
 }
 
-/* ---------- BURGER MENU KNAP---------- */
+/* ---------- BURGER MENU ---------- */
 .burger-btn {
   display: flex;
   flex-direction: column;
@@ -72,7 +70,7 @@
   pointer-events: none;
 }
 
-/* ---------- NÅR MENU ER ÅBEN ---------- */
+/* ------ når popupmenu er ÅBEN ------ */
 .nav {
   display: none;
   position: fixed;
@@ -84,31 +82,24 @@
   -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
 }
-
-/* Når menu åbnes */
+/* når menu åbnes */
 .header.menu-open .nav {
   display: block;
 }
-
-/* --- menu boksen --- */
 .nav-inner {
   width: 82%;
   max-width: 420px;
   height: 100%;
-
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   border-top-right-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
-
   padding: 2rem;
   display: flex;
   flex-direction: column;
 }
 
-/* --- toppen i popup menuen --- */
 .menu-top {
   display: flex;
   justify-content: space-between;
@@ -116,13 +107,11 @@
   margin-bottom: 3rem;
 }
 
-/* logo i popup menuen */
 .menu-logo img {
   width: 80px;
   height: auto;
 }
-
-/* Krydset */
+/* krydset */
 .menu-close {
   background: none;
   border: none;
@@ -151,7 +140,7 @@
 }
 
 .nav a {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -264,6 +253,11 @@
     font-weight: 800;
     font-size: 1.5rem;
     background-color: var(--color-bg-primary);
+    transition: 0.3s ease;
+  }
+
+  .profile-circle:hover {
+    transform: scale(1.08);
   }
 
   .profile-info .name {
@@ -304,6 +298,7 @@
   .menu-top {
     display: none;
   }
+  /* ------ nav links ------ */
 
   .nav ul {
     flex-direction: row;
@@ -317,12 +312,31 @@
     font-weight: 700;
   }
 
-  /* ------ HUS ------ */
+  .nav-link {
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    transition: 0.25s ease;
+  }
+
+  .nav-link:hover {
+    background-color: var(--color-red);
+    color: white;
+  }
+
+  /* ------ huset ------ */
   .nav li:first-child {
     display: block;
   }
   .nav li:first-child img {
     width: 32px;
+  }
+
+  .nav li:first-child img {
+    transition: 0.25s ease;
+  }
+
+  .nav li:first-child img:hover {
+    transform: scale(1.12);
   }
 }
 /* ------------------------- FOOTER ------------------------- */
