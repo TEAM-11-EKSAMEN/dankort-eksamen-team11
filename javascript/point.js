@@ -1,56 +1,90 @@
+// URL til supabase database
 const supabaseUrl = "https://iassvoylesrurfkrboat.supabase.co";
 
+// API nøgle som giver adgang til databasen
 const supabaseKey = "sb_publishable_bMp1kch4RmXiHdn8n5JE5A_EUfdaCql";
 
+// opretter forbindelse til supabase
 const client = supabase.createClient(supabaseUrl, supabaseKey);
 
+// henter data fra databasen
 async function getOffers() {
+  // henter alt data fra vores tabell "dankort_extra"
   const { data, error } = await client.from("dankort_extra").select("*");
 
+  // hvis der sker en fejl
   if (error) {
+    // vises fejl i console
     console.error("FEJL:", error);
+
     return;
   }
 
+  // vises data i console
   console.log(data);
 
-  const container = document.getElementById("offers-container");
+  // finder den container i HTML hvor cards skal sættes ind
+  const container = document.querySelector(".cards-container");
 
+  // går igennem hvert tilbud fra databasen
   data.forEach((offer) => {
+    // tilføjer card ind i HTML'en med html
     container.innerHTML += `
 
-      <article class="offer-card">
+      <!-- link til offer side -->
+      <a
+        href="offer.html?id=${offer.id}"
+        class="link-to-offer"
+      >
 
-        <img
-          class="offer-image"
-          src="${offer.img1}"
-          alt="${offer.name}"
-        >
+        <!-- selve cardet -->
+        <article class="card">
+        <!-- data fra databasen -->
 
-        <div class="offer-name">
-          ${offer.name}
-        </div>
+          <!-- billede -->
 
-        <div class="offer-content">
+          <img
+            class="img-offer"
+            src="${offer.img1}"
+            alt="${offer.name}"
+          >
 
-          <h2 class="offer-ticket">
-            ${offer.billet}
-          </h2>
+          <!-- navn øverst i højre hjørne -->
 
-          <p class="offer-points">
-            ${offer.point} point
-          </p>
+          <div class="name-text">
+            ${offer.name}
+          </div>
 
-          <button class="red-cta offer-btn">
-            Se mere
-          </button>
+          <!-- nederste del af sorte boks -->
 
-        </div>
+          <div class="lower-part-box">
 
-      </article>
+            <!-- øverste del af boks med billet og point -->
+
+            <div class="upper-part-box">
+              <h2 class="billet-text">
+                ${offer.billet}
+              </h2>
+              <p class="points-text">
+                ${offer.point} point
+              </p>
+            </div>
+
+            <!-- Knap -->
+
+            <button class="red-cta offer-btn">
+              Se mere
+            </button>
+
+          </div>
+
+        </article>
+
+      </a>
 
     `;
   });
 }
 
+// kører funktionen når siden loader
 getOffers();

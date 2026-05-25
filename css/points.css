@@ -55,6 +55,7 @@
   width: 100%;
   border-radius: var(--radius-medium);
   object-fit: cover;
+  height: 450px;
 }
 
 /* ---------------- DANKORT LOGO ---------------- */
@@ -111,12 +112,17 @@
 
   .kids-img img {
     max-width: 350px;
+
+    margin-inline: auto;
   }
 
   /* Point sektion */
 
   .points-section {
     max-width: 80%;
+    margin-inline: auto;
+
+    text-align: center;
   }
 }
 
@@ -204,6 +210,8 @@
   .points-section {
     max-width: 700px;
     margin-top: 5rem;
+    margin-inline: 0;
+    text-align: left;
   }
 
   .points-section h2 {
@@ -215,109 +223,160 @@
     max-width: 65ch;
   }
 }
-/* -------- GRID -------- */
+/* ------------------------   CARDS  ------------------------ */
 
-.offers-grid {
+.cards-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-
   padding-block: 2rem;
-}
-
-/* -------- DESKTOP -------- */
-
-@media (min-width: 768px) {
-  .offers-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 /* -------- CARD -------- */
 
-.offer-card {
+.card {
   position: relative;
-
-  min-height: 520px;
-
+  min-height: 420px;
   border-radius: 2rem;
-
   overflow: hidden;
-
-  background-color: var(--color-dark);
+  background: var(--color-dark);
 }
-
-/* -------- IMAGE -------- */
-
-.offer-image {
+.img-offer {
   position: absolute;
-
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
-/* -------- TOP NAME -------- */
-
-.offer-name {
+/* --- navn øverst i højre hjørne --- */
+.name-text {
   position: absolute;
-
-  top: 1.5rem;
-  right: 1.5rem;
-
-  z-index: 2;
-
-  color: white;
-
-  font-size: 1rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
-/* -------- DARK BOX -------- */
+/* --- boksen med navn og point i (med bukket i) --- */
 
-.offer-content {
+.upper-part-box {
   position: absolute;
+  top: -60px;
+  right: 0;
+  width: 200px;
+  background: var(--color-dark);
+  padding: 1rem;
+  border-top-left-radius: 2.8rem; /*bukket*/
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 2rem;
+}
+/* --- boksen under med knappen på --- */
 
-  bottom: 0;
+.lower-part-box {
+  position: absolute;
   left: 0;
-
-  width: 100%;
-
-  background-color: var(--color-dark);
-
+  right: 0;
+  bottom: 0;
+  background: var(--color-dark);
   padding: 2rem;
-
-  border-top-right-radius: 3rem;
-
+  padding-top: 1rem;
+  min-height: 10px;
   z-index: 2;
 }
 
-/* -------- BILLET -------- */
+/* --- billetten --- */
 
-.offer-ticket {
-  color: white;
-
-  font-size: 1.5rem;
-  font-weight: 800;
-
-  margin-bottom: 0.2rem;
-}
-
-/* -------- POINT -------- */
-
-.offer-points {
-  color: white;
-
+.billet-text {
+  color: var(--color-text-secondary);
   font-size: 1.2rem;
-
-  margin-bottom: 2rem;
+  font-weight: 800;
 }
 
-/* -------- BUTTON -------- */
+/* --- point --- */
+
+.points-text {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+/* --- se mere knap --- */
 
 .offer-btn {
   width: 100%;
+  padding-block: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.link-to-offer {
+  text-decoration: none;
+}
+
+/* -------- TABLET/DESKTOP -------- */
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .upper-part-box {
+    width: 220px;
+  }
+  /* --- font størrelse --- */
+
+  .billet-text {
+    font-size: 1.3rem;
+  }
+  .points-text {
+    font-size: 1.1rem;
+  }
+  .offer-btn {
+    font-size: 1.2rem;
+  }
+}
+/* -------- DESKTOP -------- */
+@media (min-width: 1024px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    min-height: 620px;
+    border-radius: 3rem;
+  }
+  .name-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    top: 1.5rem;
+    right: 2rem;
+  }
+  .upper-part-box {
+    width: 320px;
+    padding: 1rem;
+    top: -90px;
+    border-top-left-radius: 5rem; /*bukket*/
+    padding-left: 2rem;
+  }
+
+  .billet-text {
+    font-size: 1.7rem;
+    margin-bottom: 0.2rem;
+  }
+  .points-text {
+    font-size: 1.5rem;
+  }
+  /* --- se mere knap --- */
+  .offer-btn {
+    width: 100%;
+    padding-block: 1.1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
 }
