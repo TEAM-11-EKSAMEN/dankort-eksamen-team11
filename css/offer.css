@@ -1,0 +1,229 @@
+/* --------- MOBILE FIRST --------- */
+
+/* tilbage knap */
+.back-btn {
+  display: inline-block;
+  margin-block: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--color-red);
+}
+
+/* --------- hero sektionen --------- */
+.offer-hero {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.offer-hero img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+
+/* boksen som laver bukket ind på billedet */
+.name-box {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  background: var(--color-bg-primary);
+  padding: 1rem 1.3rem;
+  border-top-left-radius: 2rem;
+  z-index: 2;
+}
+.name-box h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* -------- TEXT -------- */
+
+.offer-text h1 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.offer-text h2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.offer-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* --- grid med billedet på mobil og tablet --- */
+.img2-mobile {
+  margin-block: 2rem;
+}
+
+.img2-mobile img {
+  width: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+/* desktop image grid = skjult */
+.img2-desktop {
+  display: none;
+}
+
+/* -- fordele og pris --- */
+.fordele-list {
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.fordele-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.pris {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.pris strong {
+  font-weight: 700;
+}
+
+/* -------- indløs tilbud - KNAP -------- */
+
+.red-cta {
+  display: flex;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+/* når vi handler sammen svg */
+
+.sammen-svg {
+  display: flex;
+  justify-content: center;
+}
+
+.sammen-svg img {
+  width: 160px;
+}
+
+/* --------- TABLET --------- */
+
+@media (min-width: 768px) {
+  /* --- hero --- */
+  .offer-hero img {
+    height: 420px;
+  }
+  /* boksen som laver bukket ind på billedet */
+  .name-box {
+    padding: 1rem 2.5rem;
+  }
+  .name-box h2 br {
+    display: none;
+  }
+  /* -------- text -------- */
+  .name-box h2 {
+    font-size: 1.3rem;
+  }
+  .offer-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .offer-text h2 {
+    font-size: 2.2rem;
+  }
+  /* --- billede 2 --- */
+  .img2-mobile {
+    display: flex;
+
+    justify-content: center;
+  }
+  .img2-mobile img {
+    width: 70%;
+    object-fit: cover;
+  }
+}
+
+/* --------- DESKTOP --------- */
+
+@media (min-width: 1024px) {
+  /* --- hero --- */
+  .offer-hero img {
+    height: 500px;
+  }
+
+  .name-box {
+    padding: 2rem 4rem;
+  }
+
+  .name-box h2 {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+  .name-box h2 br {
+    display: none;
+  }
+  /* --- Grid i desktop --- */
+  .offer-text {
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    align-items: start;
+  }
+  /* billede til højre */
+  .img2-desktop {
+    display: block;
+  }
+
+  .img2-desktop img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 2rem;
+  }
+  /* mobil billede = skjult */
+
+  .img2-mobile {
+    display: none;
+  }
+
+  /* -------- TEXT -------- */
+
+  .offer-text h1 {
+    font-size: 3rem;
+  }
+
+  .offer-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .offer-text p {
+    max-width: 60ch;
+  }
+
+  /* -------- PRICE -------- */
+
+  .pris {
+    justify-content: flex-start;
+    font-size: 2rem;
+  }
+
+  .red-cta {
+    margin-inline: 0;
+  }
+
+  .sammen-svg {
+    justify-content: flex-start;
+  }
+
+  .sammen-svg img {
+    width: 180px;
+  }
+}
