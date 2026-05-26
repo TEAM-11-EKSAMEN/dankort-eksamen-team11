@@ -441,9 +441,17 @@ p {
 
   .two-col {
     grid-template-columns: 1.6fr 1fr;
-    gap: 40px;
+    gap: 200px;
     align-items: center;
     margin-bottom: 105px;
+  }
+
+  .two-col h2 {
+    width: calc(100% + 150px);
+  }
+
+  .two-col p {
+    width: calc(100% + 150px);
   }
 
   h2 {
