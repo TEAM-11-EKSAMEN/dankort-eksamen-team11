@@ -100,14 +100,8 @@ main {
   align-items: center;
   gap: 0.35rem;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 1.5px;
   text-align: center;
-}
-
-.rank-badge img {
-  width: 86px;
-  height: auto;
-  display: block;
 }
 
 .rank-badge p {
@@ -176,16 +170,16 @@ main {
 }
 
 .green-choice-icon {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .green-choice-icon img {
-  width: 36px;
+  width: 48px;
   height: auto;
   display: block;
 }
@@ -321,15 +315,30 @@ main {
 .badges-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: center;
+  align-items: start;
   justify-items: center;
   gap: 0.85rem;
 }
 
-.badges-list img {
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.badge-item img {
   width: clamp(58px, 17vw, 92px);
   height: auto;
   display: block;
+}
+
+.badge-item p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .development-illustration-section {
@@ -408,6 +417,12 @@ main {
 }
 
 .development-track {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.development-track-mobile {
   width: 100%;
   height: auto;
   display: block;
@@ -626,12 +641,30 @@ main {
 
 .badge-image {
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  color: #ffffff;
+  font-size: 1.5px;
+  text-align: center;
+}
+
+.rank-badge img {
+  width: 70px;
+  height: auto;
+  display: block;
 }
 
 .badge-image img {
-  width: 86px;
+  width: 60px;
   height: auto;
   display: block;
+}
+
+.badge-image p,
+.rank-badge p {
+  margin: 0;
 }
 
 /* --------- TABLET ---------*/
@@ -765,9 +798,12 @@ main {
     font-size: 1.05rem;
   }
 
-  .badge-image img,
   .rank-badge img {
     width: 112px;
+  }
+
+  .badge-image img {
+    width: 96px;
   }
 
   .green-choice-card,
@@ -798,5 +834,13 @@ main {
   .card-design-colors,
   .card-design-button {
     width: min(100%, 230px);
+  }
+
+  .development-track {
+    display: block;
+  }
+
+  .development-track-mobile {
+    display: none;
   }
 }
