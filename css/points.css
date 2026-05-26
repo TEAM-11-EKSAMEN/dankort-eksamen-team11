@@ -56,16 +56,23 @@
 }
 
 /* ------ når vi handler sammen svg  ------ */
-
-.sammen-svg {
+.logo-sammen {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
-.sammen-svg img {
-  width: 200px;
+.logo-sammen img {
+  width: 4.5rem;
+  height: auto;
+}
+
+.logo-sammen p {
+  font-size: 1.35rem;
+  line-height: 1.2;
 }
 
 /* ------ point ------ */
@@ -153,15 +160,11 @@
     grid-template-columns: 1fr 420px;
     gap: 5rem;
     align-items: center;
-
-    margin-bottom: 6rem;
+    margin-bottom: 0.1rem;
   }
 
   /* Tekst */
 
-  .text {
-    margin-bottom: 0;
-  }
   .hero-header h1 {
     font-size: 48px;
     font-weight: 700;
@@ -180,6 +183,7 @@
     font-size: 1.1rem;
     line-height: 1.72;
     max-width: 60ch;
+    margin-bottom: 1.5rem;
   }
 
   /* Billede */
@@ -197,14 +201,21 @@
   }
 
   /* SVG */
-
-  .sammen-svg {
+  .text:last-child p {
+    margin-bottom: 0.5rem;
+  }
+  .logo-sammen-offer {
+    display: flex;
     justify-content: flex-start;
-    margin-top: -1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
-  .sammen-svg img {
-    width: 180px;
+  .logo-sammen img {
+    width: 4.25rem;
+  }
+  .logo-sammen p {
+    font-size: 1.25rem;
   }
 
   /* Point sektion */
