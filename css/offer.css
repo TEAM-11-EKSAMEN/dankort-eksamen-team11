@@ -83,7 +83,7 @@
   margin-bottom: 0.6rem;
   line-height: 1.6;
 }
-
+/* -- ens point -- */
 .pris {
   display: flex;
   justify-content: center;
@@ -95,6 +95,12 @@
 .pris strong {
   font-weight: 700;
 }
+/* understreg underlinjen */
+.point-line {
+  display: inline-block;
+  border-bottom: 2px solid var(--color-red);
+  line-height: 1;
+}
 
 /* -------- indløs tilbud - KNAP -------- */
 
@@ -103,9 +109,7 @@
   margin-inline: auto;
   margin-bottom: 2rem;
 }
-
-/* når vi handler sammen svg */
-
+/* --------- Når vi handler sammen---------*/
 .logo-sammen {
   display: flex;
   align-items: center;
@@ -114,14 +118,13 @@
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
-
 .logo-sammen img {
-  width: 4.5rem;
+  width: 3.5rem;
   height: auto;
 }
 
 .logo-sammen p {
-  font-size: 1.35rem;
+  font-size: 1rem;
   line-height: 1.2;
   margin: 0;
 }
@@ -166,11 +169,6 @@
 /* --------- DESKTOP --------- */
 
 @media (min-width: 1024px) {
-  .page-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-inline: 1px;
-  }
   /* --- hero --- */
   .offer-hero img {
     height: 500px;
@@ -223,7 +221,6 @@
   .offer-text p {
     max-width: 60ch;
   }
-
   /* -------- PRICE -------- */
 
   .pris {
@@ -235,21 +232,23 @@
     margin-inline: 0;
     margin-bottom: 0;
   }
-
-  .logo-sammen {
-    margin: 0;
-  }
-
-  .logo-sammen img {
-    width: 4.25rem;
-  }
-
-  .logo-sammen p {
-    font-size: 1.25rem;
-  }
   .cta-row {
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+
+  .cta-row .logo-sammen {
+    margin: 0;
+  }
+  .logo-sammen img {
+    width: 4.5rem;
+    height: auto;
+  }
+
+  .logo-sammen p {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    margin: 0;
   }
 }

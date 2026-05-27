@@ -34,6 +34,11 @@ main {
   main {
     padding: 0 1.5rem;
   }
+  .page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
 }
 /* --------- FONT---------*/
 body {
@@ -148,6 +153,7 @@ p {
   p {
     font-size: 1.25rem;
   }
+
   /* --------- CTA---------*/
   .red-cta,
   .grey-cta,
