@@ -29,60 +29,53 @@ async function getOffers() {
   // går igennem hvert tilbud fra databasen
   data.forEach((offer) => {
     // tilføjer card ind i HTML'en med html
+
     container.innerHTML += `
 
-      <!-- link til offer side -->
+  <!-- selve cardet -->
+  <article class="card">
+
+    <!-- billede -->
+    <img
+      class="img-offer"
+      src="${offer.img1}"
+      alt="${offer.name}"
+    >
+
+    <!-- navn -->
+    <div class="name-text">
+      ${offer.name}
+    </div>
+
+    <!-- nederste del -->
+    <div class="lower-part-box">
+
+      <!-- øverste boks -->
+      <div class="upper-part-box">
+        <h2 class="billet-text">
+          ${offer.billet}
+        </h2>
+
+        <p class="points-text">
+          ${offer.point} point
+        </p>
+      </div>
+
+      <!-- KUN knappen linker -->
       <a
         href="offer.html?id=${offer.id}"
         class="link-to-offer"
       >
-
-        <!-- selve cardet -->
-        <article class="card">
-        <!-- data fra databasen -->
-
-          <!-- billede -->
-
-          <img
-            class="img-offer"
-            src="${offer.img1}"
-            alt="${offer.name}"
-          >
-
-          <!-- navn øverst i højre hjørne -->
-
-          <div class="name-text">
-            ${offer.name}
-          </div>
-
-          <!-- nederste del af sorte boks -->
-
-          <div class="lower-part-box">
-
-            <!-- øverste del af boks med billet og point -->
-
-            <div class="upper-part-box">
-              <h2 class="billet-text">
-                ${offer.billet}
-              </h2>
-              <p class="points-text">
-                ${offer.point} point
-              </p>
-            </div>
-
-            <!-- Knap -->
-
-            <button class="red-cta offer-btn">
-              Se mere
-            </button>
-
-          </div>
-
-        </article>
-
+        <button class="red-cta offer-btn">
+          Se mere
+        </button>
       </a>
 
-    `;
+    </div>
+
+  </article>
+
+`;
   });
 }
 

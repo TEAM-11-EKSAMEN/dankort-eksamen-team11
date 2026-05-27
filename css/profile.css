@@ -1,12 +1,6 @@
 /* --------- MOBILE FIRST ---------*/
-html,
-body {
-  min-height: 100%;
-  margin: 0;
-}
 
 body {
-  font-family: "Raleway", sans-serif;
   background-image: url("../img/profile/Generated with Kive.ai - Ultra-realistic cinematic photograph of a dense Scandinavian forest covered in soft morning fog and mist. Tall dark pine trees emerging through layers of atmospheric haze_ creating a mysterious and calm Nordic m (1.webp");
   background-size: cover;
   background-position: center center;

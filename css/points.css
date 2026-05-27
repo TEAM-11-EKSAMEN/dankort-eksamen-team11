@@ -54,8 +54,7 @@
   object-fit: cover;
   height: 450px;
 }
-
-/* ------ når vi handler sammen svg  ------ */
+/* --------- Når vi handler sammen---------*/
 .logo-sammen {
   display: flex;
   align-items: center;
@@ -66,13 +65,14 @@
 }
 
 .logo-sammen img {
-  width: 4.5rem;
+  width: 3.5rem;
   height: auto;
 }
 
 .logo-sammen p {
-  font-size: 1.35rem;
+  font-size: 1rem;
   line-height: 1.2;
+  margin: 0;
 }
 
 /* ------ point ------ */
@@ -138,7 +138,7 @@
 /* --------- DESKTOP ---------*/
 @media (min-width: 1024px) {
   .hero-container {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
   }
 
   .hero-img {
@@ -200,11 +200,12 @@
     object-fit: cover;
   }
 
-  /* SVG */
+  /* --------- Når vi handler sammen---------*/
+
   .text:last-child p {
     margin-bottom: 0.5rem;
   }
-  .logo-sammen-offer {
+  .logo-sammen-point {
     display: flex;
     justify-content: flex-start;
     margin-top: 1rem;
@@ -212,12 +213,15 @@
   }
 
   .logo-sammen img {
-    width: 4.25rem;
-  }
-  .logo-sammen p {
-    font-size: 1.25rem;
+    width: 4.5rem;
+    height: auto;
   }
 
+  .logo-sammen p {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    margin: 0;
+  }
   /* Point sektion */
 
   .points-section {
